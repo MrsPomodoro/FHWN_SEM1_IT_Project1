@@ -1,7 +1,8 @@
 """
 Simple Calculator - Main Program
-Fill in the missing parts!
+Handles user input, menu selection, and calls calculator functions.
 """
+
 from calculator import add, subtract, multiply, divide
 from history import save_calculation, load_history, show_history
 
@@ -37,11 +38,24 @@ def main():
         elif choice in ['1', '2', '3', '4']:
             a, b = get_numbers()
             if a is not None and b is not None:
-                # TODO: Call the right function based on choice
-                # TODO: Save the calculation to history
-                pass
+                if choice == '1':
+                    result = add(a, b)
+                    operation = f"{a} + {b}"
+                elif choice == '2':
+                    result = subtract(a, b)
+                    operation = f"{a} - {b}"
+                elif choice == '3':
+                    result = multiply(a, b)
+                    operation = f"{a} * {b}"
+                elif choice == '4':
+                    result = divide(a, b)
+                    operation = f"{a} / {b}"
+                print(f"Result: {result}")
+                save_calculation(operation, result)
+            else:
+                print("Invalid input. Try again.")        
         else:
-            print("Invalid choice!")
+            print("Invalid choice! Please select 1-6.")
 
 if __name__ == "__main__":
     main()
