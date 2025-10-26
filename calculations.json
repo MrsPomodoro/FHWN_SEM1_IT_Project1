@@ -1,0 +1,22 @@
+[
+  {
+    "operation": "3.0 * 3.0",
+    "result": 9.0
+  },
+  {
+    "operation": "3.0 - 3.0",
+    "result": 0.0
+  },
+  {
+    "operation": "12.0 + 87.0",
+    "result": 99.0
+  },
+  {
+    "operation": "55.0 / 7.0",
+    "result": 7.857142857142857
+  },
+  {
+    "operation": "67.0 / 0.0",
+    "result": "Error: Cannot divide by zero."
+  }
+]
